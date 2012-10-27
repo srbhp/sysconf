@@ -2,5 +2,5 @@ For cloning :
 git clone https://github.com/pradhanphy/sysconf.git
 Publish the changes :
 git add .
-git commit -m "Some sting that describes the changes that you made"
+git commit -m "Some sting that describes the changes that you made "
 git push
