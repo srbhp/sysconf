@@ -1,0 +1,3 @@
+For cloning :
+git clone https://github.com/pradhanphy/sysconf.git
+
