@@ -1,5 +1,5 @@
 sysconf
 =======
 
-Linux config Files
+Linux/Mac config Files
 
