@@ -17,61 +17,24 @@ NORMAL='\[\033[00m\]'
 PS1="${BRED}\h${BGREEN}|${BBLUE}\w${BGREEN}| ${RED}\$ ${NORMAL}"
 
 
-#export https_proxy=http://192.168.3.50:3100/
-#export http_proxy=http://192.168.3.50:3100/
-#------background animation::
-#xwinwrap -ni -argb -fs -s -st -sp -nf -b -- /usr/libexec/xscreensaver/molecule  -window-id WID &
 
-test -s ~/.alias && . ~/.alias || true
-#alias rm='rm -i'
-alias ls='ls --color=tty'
-alias icmp="sh /home/saurabh/.icmp"
+alias ls='ls -Gp'                           # Preferred ‘ls’ implementation
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+# alias less='less -FSRXc'                    # Preferred 'less' implementation
+cd() { builtin cd "$@"; ls; }               # Always list directory contents upon 'cd'
+alias cd..='cd ../'                         # Go back 1 directory level (for fast typers)
+alias ..='cd ../'                           # Go back 1 directory level
+alias ...='cd ../../'                       # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias f='open -a Finder ./'                 # f:            Opens current directory in MacOS Finder
+alias c='clear'                             # c:            Clear terminal display
+# alias which='type -all'                     # which:        Find executables
+alias cic='set completion-ignore-case On'   # cic:          Make tab-completion case-insensitive
+mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 
-#alias icmp="icc $1 $ilab"
-alias s='ssh -X rabh@ipc81.mri.ernet.in'
-alias s2='ssh -X rabh@ipc42.mri.ernet.in'
-alias ur='unrar e'
-alias l2='lpq -Pduplex2'
-alias p='alpine -passfile /home/saurabh/.pine_pwd'
-alias cl='ssh -X rabh@clpc00.mri.ernet.in'
-alias e='evince'
-alias go='gnome-open'
-alias ko='kde-open'
-alias k='kde-open'
-alias gmail='elinks www.gmail.com'
-alias g='g++  '
-alias py='python'
-alias me='ssh -X saurabh@siper.dhcp.hri'
-alias matlab='/usr/local/MATLAB/R2010b/bin/./matlab'
-alias mp='mplayer  http://91.121.60.128/     http://67.228.101.162:7800 http://67.228.101.162:8000 http://67.228.101.162:8200 http://67.228.101.162:8400 http://208.110.69.125:8056  http://91.121.203.133/ http://205.188.215.230:8024'
-alias ipy='ipython --pylab'
-
-    export CULA_ROOT="/usr/local/cula"
-    export CULA_INC_PATH="$CULA_ROOT/include"
-    export CULA_BIN_PATH_32="$CULA_ROOT/bin"
-    export CULA_BIN_PATH_64="$CULA_ROOT/bin64"
-    export CULA_LIB_PATH_32="$CULA_ROOT/lib"
-    export CULA_LIB_PATH_64="$CULA_ROOT/lib64"
-
-#-----------FFTW
-#        export FFTW_INCLUDE_DIR="/usr/include"
-#        export FFTW_LIBRARIES="/usr/lib64/libfftw3.so.3"
-#        export HDF5_INCLUDE_DIR="/usr/include"
-#        export HDF5_LIBRARIES="/usr/lib64/libhdf5.so"
-
-#        export MPI_C_COMPILER="/usr/lib64/mpich2/bin/mpicc"
-#        export MPI_CXX_COMPILER="/usr/lib64/mpich2/bin/mpicxx"
-#        export MPI_C_INCLUDE_PATH="/usr/include/mpich2-x86_64"
-#        export MPI_CXX_INCLUDE_PATH="/usr/include/mpich2-x86_64"
-#        export MPI_C_LINK_FLAGS="-L/usr/lib64/mpich2/lib -L/usr/lib64/mpich2/lib"
-#        export MPI_C_LIBRARIES="           -lmpich -lopa -lmpl -lrt -ldl -lpami -lSPI -lSPI_cnk -lpthread -lrt"
-#        export MPI_CXX_LIBRARIES="-lcxxmpich -lmpich -lopa -lmpl -lrt -ldl -lpami -lSPI -lSPI_cnk -lpthread -lrt"
-
-#        export MKL_INCLUDE_DIR="/opt/intel/composerxe/mkl/include"
-#        export LAPACK_LIBRARY="/opt/intel/composerxe/mkl/lib/intel64"
-#        export LAPACK_LIBS="/opt/intel/composerxe/mkl/lib/intel64/libmkl_core.so;/opt/intel/composerxe/mkl/lib/intel64/libmkl_intel_ilp64.so; /opt/intel/composerxe/mkl/lib/intel64/libmkl_sequential.so;/opt/intel/composerxe/mkl/lib/intel64/libmkl_gnu_thread.so"
-
-export LD_LIBRARY_PATH=/usr/lib64/mpich2/lib:$LD_LIBRARY_PATH
-export PYTHONSTARTUP=/home/saurabh/.pystartup
-source /opt/intel/composer_xe_2013.0.079/bin/compilervars.sh intel64
-#alias asy='asy --psviewer="/usr/bin/gv" --pdfviewer="/usr/bin/okular" '
