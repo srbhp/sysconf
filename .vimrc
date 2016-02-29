@@ -133,3 +133,5 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
+set spell "checking spell
+
