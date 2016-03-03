@@ -134,4 +134,11 @@ augroup resCur
 augroup END
 
 set spell "checking spell
-
+"Add backup files
+set swapfile
+set dir=~/.vim/swap/
+set backup
+set backupdir=~/.vim/swap/
+set backupskip=~/.vim/swap/*
+set directory=~/.vim/swap/
+set writebackup
