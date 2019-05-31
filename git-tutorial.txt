@@ -4,3 +4,7 @@ Publish the changes :
 git add .
 git commit -m "Some sting that describes the changes that you made "
 git push
+
+
+#github + ssh 
+ git clone git@github.com:username/your-repository.git
