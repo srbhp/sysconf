@@ -1,0 +1,40 @@
+# vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+# font_family FiraCode Nerd Font Mono
+font_family Fira Code Regular Nerd Font Complete Mono
+# font_family JetBrains Mono Regular Nerd Font Complete Mono
+#font_family      DroidSansMono Nerd Font Mono
+#font_family      monospace
+# bold_font       Fira Mono Regular Nerd Font Complete
+#bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size 10.0
+adjust_line_height  0
+adjust_column_width 0
+symbol_map U+E0A0-U+E0A3,U+E0C0-U+E0C7 PowerlineSymbols
+box_drawing_scale 0.001, 1, 1.5, 2
+# tab_bar_style         custom
+
+tab_bar_style       custom
+# 
+
+enable_audio_bell no
+hide_window_decorations true
+# cursor #cccccc
+enabled_layouts splits 
+# }}}
+#User Map
+map F5 launch --location=hsplit --cwd=current
+map F6 launch --location=vsplit --cwd=current
+map F7 layout_action rotate
+#linux_display_server  x11
+map shift+right next_tab
+map shift+left  previous_tab
+map kitty_mod+t     new_tab_with_cwd
+# BEGIN_KITTY_THEME
+# Rosé Pine Moon
+include current-theme.conf
+# END_KITTY_THEME
+editor nvim
+shell_integration enabled no-cwd
+include localkitty.conf

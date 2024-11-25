@@ -1,0 +1,14 @@
+# Größe der Zeichenfläche in Zoll
+figure.figsize : 6.5, 4.
+# Serifenfont benutzen
+font.family : serif
+
+# Fontgrößen
+font.size : 16
+#legend.fontsize : small
+xtick.labelsize : 11
+ytick.labelsize : 11
+
+# TeX benutzen
+text.usetex : True
+backend: pdf 
