@@ -8,17 +8,13 @@ on:
       - main
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  run_tests:
+    runs-on: ubuntu-20.04
     steps:
-      - name: build
-        run:  ./debian.sh
-
-  publish:
-    needs: [build]
-    runs-on: ubuntu-latest
-    environment: production
-    steps:
-      - name: publish
-        run: ./startup.sh
+    - uses: actions/checkout@v2
+    - name: Run script file
+      run: |
+         chmod +x ./debian.sh
+         ./debian.sh
+      shell: bash
 
