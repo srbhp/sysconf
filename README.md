@@ -1,6 +1,8 @@
 System configuration file for Linux/Mac 
 =======
 
+<details>
+  <summary>Macbook specific configuration file for Linux</summary>
 
 # Macbook Air Early 2015 model specific configuration.
 
@@ -39,6 +41,9 @@ add control = Control_R
 add mod4 = Super_L
 ```
 
+### Make fedora as default start up disk (in Mac)
+`sudo bless --mount=/Volumes/Linux\ HFS+\ ESP --file=/Volumes/Linux\ HFS+\ ESP/efi/fedora/grubx64.efi --setBoot`
+
 
 ### Fix power management  :
 
@@ -46,11 +51,18 @@ $ `cat /etc/udev/rules.d/90-xhc_sleep.rules `
 ### disable wake from S3 on XHC1
 SUBSYSTEM=="pci", KERNEL=="0000:00:14.0", ATTR{power/wakeup}="disabled"  
 $ Add and enable lid0-wake.service (file included)
+</details>
 
 # System Configuration
 
 ## Distro Specific Configuration
-`bash <distro>.sh`
+
+Current I use debian, opensuse or fedora. To install distro
+Specific packages  run
+
+    ```
+    bash <distro>.sh
+    ```
 
 ### generic configuration
 run the `bash startup.sh` Command.
@@ -62,9 +74,5 @@ systemctl mask systemd-rfkill.service
 systemctl enable tlp.service  
 systemctl start  tlp.service
 ```
-
-
-### Make fedora as default start up disk (in Mac)
-`sudo bless --mount=/Volumes/Linux\ HFS+\ ESP --file=/Volumes/Linux\ HFS+\ ESP/efi/fedora/grubx64.efi --setBoot`
 
 
