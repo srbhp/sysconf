@@ -52,6 +52,7 @@ pkgs.mkShell {
     pkgs.unzip
     pkgs.vim
     pkgs.vim-language-server
+    pkgs.bash-language-server
   ];
 
   shellHook = ''
